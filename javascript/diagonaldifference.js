@@ -84,3 +84,17 @@ var matrix = [
 ];
 
 console.log(getArray(matrix));
+
+/* 
+Other solutions
+
+var lr = rl = 0;
+for(var i = 0; i<n; i++){
+    lr += a[i][i];
+    rl += a[i][n-i-1];
+}  
+console.log(Math.abs(lr-rl));
+
+---------------------------------------
+
+*/
