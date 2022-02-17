@@ -66,15 +66,51 @@ Only the second orange falls within the region between  and , so we print  as ou
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
   // Write your code here
-  const xApples = apples.map(apple => apple + a);
-  const xOragens = oranges.map(orange => orange + b);
-  let arr = []
+  let countApples = 0;
+  let countOranges = 0;
 
-  while (condition) {
-    
+  for (const i of apples) {
+    let d = i + a
+
+    if (d >= s && d <= t) {
+      countApples++
+    }
   }
 
-  return console.log(xOragens);
+  for (const i of oranges) {
+    let d = i + b
+
+    if (d >= s && d <= t) {
+      countOranges++
+    }
+  }
+  return(console.log(countApples, '\n'+countOranges))
+  
+} 
+
+countApplesAndOranges(7, 10, 4, 12, [2, 3, -4], [3, -2, -4])
+
+/* 
+Other solutions
+
+var apple_count = apple.filter(value => value + a >= s && value + a <= t).length;
+var orange_count = orange.filter(value => value + b >= s && value + b <= t).length;
+
+-------------------------------------------------------
+
+function appleAndOrange(s, t, a, b, apple, orange) {
+    return [
+        apple.map(p => p + a).filter(p => p >= s && p <= t).length,
+        orange.map(p => p + b).filter(p => p >= s && p <= t).length
+    ]
 }
 
-countApplesAndOranges(0, 0, 4, 5, [1, 2,3], [5, 6, 7])
+----------------------------------------
+
+console.log(apples.filter(apple => a + apple >= s && a + apple <= t).length);
+console.log(oranges.filter(orange => b + orange >= s && b + orange <= t).length);
+
+-------------------------------------------------------
+
+
+*/
