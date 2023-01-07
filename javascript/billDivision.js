@@ -64,5 +64,9 @@ function bonAppetit(bill, k, b) {
   } else {
     console.log(b - half);
   }
-  
+
 }
+
+/* 
+
+*/
